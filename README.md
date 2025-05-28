@@ -1,34 +1,28 @@
 
-📌 Project Status
+## 📌 Project Status
 Hi! This project is currently under development. The mobile version of the Homepage is available, and I'm working on the layout, reusable components, and foundational structure.
 
 🔧 Upcoming features:
 
 Responsive design for larger screens
 
-Routing with React Router
+- Routing with React Router
 
-Internal views (product, cart, etc.)
+- Internal views (product, cart, etc.)
 
-Cart logic and interactive features
+- Cart logic and interactive features
 
-🚀 Technologies Used
-React
-
-TypeScript
-
-Vite
-
-Tailwind CSS
-
-pnpm as the package manager
+## 🚀 Technologies Used
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [pnpm](https://pnpm.io/) as the package manager
 
 📌 If you're using another package manager like npm or yarn, you can still install the dependencies — however, I recommend using pnpm.
 
-📦 Installation
-bash
-Copiar
-Editar
+## 📦 Installation
+```bash
 1. Clone the repository
 
 git clone https://github.com/anabella-01/ecommerce-project.git
