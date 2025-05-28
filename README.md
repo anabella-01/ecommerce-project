@@ -1,38 +1,45 @@
-## 📌 Estado actual del proyecto
 
-¡Hola! Este proyecto se encuentra en desarrollo. Actualmente está disponible la versión mobile de la **Homepage** y estoy trabajando en las bases de diseño, estructura y componentes reutilizables.
+📌 Project Status
+Hi! This project is currently under development. The mobile version of the Homepage is available, and I'm working on the layout, reusable components, and foundational structure.
 
-🔧 Pendientes por implementar:
-- Diseño responsive para pantallas más grandes.
-- Ruteo con React Router.
-- Creación de vistas internas (producto, carrito, etc).
-- Lógica de carrito y funcionalidades interactivas.
+🔧 Upcoming features:
 
-📅 Última actualización: 27/05/2025
----
+Responsive design for larger screens
 
-## 🚀 Tecnologías utilizadas
+Routing with React Router
 
-- [React](https://react.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Vite](https://vitejs.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [pnpm](https://pnpm.io/) como gestor de paquetes
+Internal views (product, cart, etc.)
 
-> 📌 Si usás otro gestor como npm o yarn, podés instalar las dependencias de todos modos. Sin embargo recomiendo `pnpm`.
+Cart logic and interactive features
 
-## 📦 Instalación
-```bash
-1. Clonar el repositorio
+🚀 Technologies Used
+React
+
+TypeScript
+
+Vite
+
+Tailwind CSS
+
+pnpm as the package manager
+
+📌 If you're using another package manager like npm or yarn, you can still install the dependencies — however, I recommend using pnpm.
+
+📦 Installation
+bash
+Copiar
+Editar
+1. Clone the repository
 
 git clone https://github.com/anabella-01/ecommerce-project.git
 
-2. Instalar dependencias
+2. Install dependencies
 
 pnpm install
 
-3. Levantar el servidor de desarrollo
+3. Start the development server
 
 pnpm run dev
 
-¡Gracias por pasar!  😊
+Thanks for stopping by! 😊
+I'm always open to connect or share ideas – feel free to reach out anytime!
