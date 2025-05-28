@@ -26,7 +26,7 @@
 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/tu-repo.git
+git clone https://github.com/anabella-01/ecommerce-project.git
 
 2. Instalar dependencias
 
