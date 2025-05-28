@@ -22,7 +22,7 @@
 > 📌 Si usás otro gestor como npm o yarn, podés instalar las dependencias de todos modos. Sin embargo recomiendo `pnpm`.
 
 ## 📦 Instalación
-
+```bash
 1. Clonar el repositorio
 
 git clone https://github.com/anabella-01/ecommerce-project.git
