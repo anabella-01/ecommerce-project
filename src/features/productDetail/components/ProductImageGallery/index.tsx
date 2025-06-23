@@ -1,5 +1,9 @@
+import { useState } from "react";
 import { IProduct } from "../../../productList/types/IProduct";
-
+import ImageThumbnail from "../ImageThumbnail";
+import image1 from "../../images/1.png";
+import image3 from "../../images/3.png";
+import image4 from "../../images/4.png"; {/**Solo de prueba, falta implementar data real*/}
 
 interface ProductImageGalleryProps{
     product: IProduct;
@@ -8,8 +12,8 @@ interface ProductImageGalleryProps{
 const ProductImageGallery = ({product}:ProductImageGalleryProps) => {
 
     const {image, title} = product;
-    const images = [image, image, image];
-    
+    const images = [image1, image3, image4];
+    const [selectedImage, setSelectedImage] = useState<string>(image);
 
     return (
 
@@ -17,7 +21,9 @@ const ProductImageGallery = ({product}:ProductImageGalleryProps) => {
 
                 {/**Main image */}
                 <div className="w-full max-w-[300px] lg:max-w-[500px] mx-auto">
-                    <img className="w-full h-full object-contain rounded-[20px]" src={image} alt={title} />
+                    <img className="w-full h-full object-contain rounded-[20px] transition-all duration-300 ease-in-out" 
+                         src={selectedImage} 
+                         alt={title} />
                 </div>
 
                 {/**Thumbnails */}
@@ -26,11 +32,13 @@ const ProductImageGallery = ({product}:ProductImageGalleryProps) => {
 
                     images.map((img,index)=>(
 
-                             <img 
+                             <ImageThumbnail
                              key={index}
-                             src={img} 
-                             alt={title} 
-                             className="size-16 object-contain rounded-[20px] cursor-pointer aspect-square " />
+                             image={img} 
+                             title={title}
+                             selected={selectedImage === img}
+                             onClick={()=>{setSelectedImage(img)}} 
+                             />
                     ))
 
                 }

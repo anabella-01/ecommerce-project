@@ -3,8 +3,8 @@ import { ILinks } from "../../types/ILinks";
 const FooterGridLinks = ({title,links}:ILinks) =>{
     return (
         <div>
-            <span className="font-secondary text-[16px] font-medium">{title}</span>
-            <ul className="space-y-3">  
+            <span className="font-secondary text-[16px]">{title}</span>
+            <ul className="space-y-2"> 
                 {links.map((linkText,index)=>(
 
                 <li key={index}>

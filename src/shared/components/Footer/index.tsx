@@ -15,17 +15,16 @@ const Footer = () => {
 
     return (
 
-        <footer className="w-full mx-auto lg:mt-10 p-5">
+        <footer className="w-full mx-auto container ">
 
-            <div className="lg:grid grid-cols-2 max-w-screen-xl mx-auto">
+            <div className="space-y-5 p-3 py-10 items-center grid grid-cols-1 lg:grid-cols-5 ">
 
-                <div className=" flex flex-col space-y-4 w-fit grow">
-                    <div className="space-y-3 lg:w-fit">
-                        <img src={logo} alt="Logo Shop.co" />
-                        <p className="font-secondary opacity-60 text-[14px] leading-5">We have clothes that suits your style and which you’re proud to wear. From women to men.</p>
-                    </div>
-
-                    <div className="flex justify-start gap-4 lg:pt-5">
+                {/* Logo + text + icons */}
+                <div className=" flex flex-col space-y-3">
+                    <img className="h-fit w-fit" src={logo} alt="Logo Shop.co" />
+                    <p className="font-secondary opacity-60 text-sm leading-relaxed">We have clothes that suits your style and which you’re proud to wear. From women to men.</p>
+                    {/* Social Icon components */}
+                    <div className="flex gap-4">
                         <SocialIcon title="Twitter">
                             <svg width="12" height="10" viewBox="0 0 12 10" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11.2071 1.56684C10.7881 1.75308 10.3458 1.86947 9.88023 1.93931C10.3458 1.65996 10.7183 1.21766 10.8812 0.68224C10.4389 0.938309 9.95006 1.12454 9.41465 1.24094C8.99562 0.798635 8.39037 0.519287 7.73856 0.519287C6.48149 0.519287 5.45721 1.54356 5.45721 2.80063C5.45721 2.98686 5.48049 3.14982 5.52705 3.31277C3.64145 3.21965 1.94208 2.31177 0.801411 0.91503C0.615178 1.26422 0.498783 1.63668 0.498783 2.0557C0.498783 2.84719 0.894527 3.54556 1.52306 3.96458C1.1506 3.9413 0.801411 3.84819 0.475504 3.68523V3.70851C0.475504 4.8259 1.26699 5.75707 2.31455 5.96658C2.12831 6.01313 1.9188 6.03641 1.70929 6.03641C1.56962 6.03641 1.40666 6.01313 1.26699 5.98986C1.56962 6.89774 2.40766 7.57283 3.40866 7.57283C2.61717 8.17808 1.63945 8.55055 0.56862 8.55055C0.382388 8.55055 0.196156 8.55055 0.0332031 8.52727C1.05748 9.17908 2.24471 9.55155 3.54833 9.55155C7.76184 9.55155 10.0665 6.05969 10.0665 3.03342C10.0665 2.9403 10.0665 2.82391 10.0665 2.73079C10.5088 2.42817 10.9045 2.03242 11.2071 1.56684Z" fill="black" />
@@ -54,36 +53,33 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="mx-auto m-5 lg:hidden">
-                    <div className="space-y-3">
+                {/* Accordion - mobile only */}
+                <div className="block col-span-full space-y-3 lg:hidden">
                         <Accordion title="Company" links={["About", "Features", "Works", "Career"]} />
                         <Accordion title="Help" links={["Customer Support", "Delivery Details", "Terms & Conditions", "Privacy Policy"]} />
                         <Accordion title="FAQ" links={["Account", "Manage Deliveries", "Orders", "Payments"]} />
-                        <Accordion title="Resources" links={["Free eBooks", "Development Tutorial", "How to - Blog", "Youtube Playlist"]} />
-                    </div>
+                        <Accordion title="Resources" links={["Free eBooks", "Development Tutorial", "How to - Blog", "Youtube Playlist"]} /> 
                 </div>
 
-                <div className="hidden lg:grid lg:grid-cols-4 lg:gap-x-10 lg:justify-items-center lg:w-full ">
+                {/* Footer links columns - desktop only */}
+                <div className="hidden lg:flex lg:col-span-4 lg:justify-evenly">
                     <FooterGridLinks title="Company" links={["About", "Features", "Works", "Career"]} />
-                    <FooterGridLinks title="Help" links={["About", "Features", "Works", "Career"]} />
-                    <FooterGridLinks title="FAQ" links={["About", "Features", "Works", "Career"]} />
-                    <FooterGridLinks title="Resources" links={["About", "Features", "Works", "Career"]} />
+                    <FooterGridLinks title="Help" links={["Customer Support", "Delivery Details", "Terms & Conditions", "Privacy Policy"]} />
+                    <FooterGridLinks title="FAQ" links={["Account", "Manage Deliveries", "Orders", "Payments"]} />
+                    <FooterGridLinks title="Resources" links={["Free eBooks", "Development Tutorial", "How to - Blog", "Youtube Playlist"]} />
                 </div>
-
-
             </div>
 
-            <section className="max-w-full mx-auto m-5">
-                <div className=" opacity-10 w-full border-t"></div>
-
-                <div className="lg:flex lg:justify-between lg:p-2">
-                    <p className="opacity-60 text-center p-4">Shop.co © 2000-2023, All Rights Reserved</p>
-                    <div className="flex flex-row justify-center items-center gap-2">
-                        <img src={visa} alt="" />
-                        <img src={mastercard} alt="" />
-                        <img src={paypal} alt="" />
-                        <img src={apay} alt="" />
-                        <img src={gpay} alt="" />
+            {/* Payment links columns - desktop only */}
+            <section className="max-w-full border-t border-gray-200 ">
+              <div className="lg:flex lg:justify-between p-2">
+                    <p className="font-secondary text-sm opacity-60 text-center p-4">Shop.co © 2000-2023, All Rights Reserved</p>
+                    <div className="flex justify-center lg:justify-end items-center gap-2">
+                        <img src={visa} alt="Visa card logo" />
+                        <img src={mastercard} alt="Mastercard card logo" />
+                        <img src={paypal} alt="Paypal logo" />
+                        <img src={apay} alt="Apple pay logo" />
+                        <img src={gpay} alt="Google pay logo" />
                     </div>
                 </div>
 

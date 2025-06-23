@@ -12,12 +12,12 @@ const Navbar = () => {
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen); // Cambia el estado del menú al hacer clic
 
     return (
-        <nav className='bg-white shadow-md'>
-            <div className='max-w-[1440px] mx-auto flex justify-between items-center px-4 py-5 md:px-6'>
+        <nav className='bg-white shadow-md w-full'>
+            <div className='mx-auto container flex justify-between items-center px-4 py-5 md:px-6'>
                 <div className='relative'>
                     <div className='flex items-center gap-2 md:flex-row-reverse'>
                         
-                        {/* Botón hamburguesa con función onClick*/}
+                        {/* Falta agregar ReactRouter*/}
                        <MenuToggle toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
 
                         <div className='md:px-4'>
